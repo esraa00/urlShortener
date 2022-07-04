@@ -36,15 +36,15 @@
           </tr>
         </thead>
         <tbody>
+          <% shortUrls.map((shortUrl)=>{ %>
           <tr>
             <td>
-              <a href="https://courses.webdevsimplified.com"
-                >https://courses.webdevsimplified.co</a
-              >
+              <a href="<%= shortUrl.full %>"> <%= shortUrl.full %></a>
             </td>
-            <td href="/123456">123456</td>
-            <td>10</td>
+            <td><a href="<%= shortUrl.short %>"> <%= shortUrl.short %></a></td>
+            <td><%= shortUrl.clicks %></td>
           </tr>
+          <% }) %>
         </tbody>
       </table>
     </div>
