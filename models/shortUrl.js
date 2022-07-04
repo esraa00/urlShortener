@@ -7,7 +7,6 @@ const shortUrlSchema = new mongoose.Schema({
   },
   short: {
     type: String,
-    required: true,
     default: shortId.generate,
   },
   clicks: {
@@ -17,4 +16,4 @@ const shortUrlSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("shortUrl", urlShortenerSchema);
+module.exports = mongoose.model("shortUrl", shortUrlSchema);
